@@ -42,6 +42,7 @@ pipeline {
     }
      post {
           failure{
+               build "our-pipline"
                echo "marc here"
                }
      }
