@@ -16,6 +16,7 @@ pipeline {
             when {
                 expression{
                     params.project == true
+                    error 'hello error'
                      
                 }
             }
@@ -39,5 +40,10 @@ pipeline {
             }
         }    
     }
+     post {
+          failure{
+               echo "marc here"
+               }
+     }
 
 }
